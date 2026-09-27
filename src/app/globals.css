@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Dark mode follows a `.dark` class on <html> (set by ThemeToggle / the inline script in layout.tsx). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #fbfaf7;
+  --fg: #16181d;
+  --muted: #5b616e;
+  --card: #ffffff;
+  --line: #e6e3dc;
+  --subtle: #f2f0ea;
+  --accent: #0f766e;
+  --accent-strong: #0b5f58;
+  --accent-soft: #e2f1ef;
+  --accent-fg: #ffffff;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #0e1113;
+  --fg: #eceef0;
+  --muted: #9aa3ad;
+  --card: #161a1d;
+  --line: #262c31;
+  --subtle: #1b2024;
+  --accent: #2dd4bf;
+  --accent-strong: #5eead4;
+  --accent-soft: #123330;
+  --accent-fg: #06201d;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-fg: var(--accent-fg);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
