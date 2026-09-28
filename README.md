@@ -45,7 +45,7 @@ Checklist before sharing:
 
 - [ ] Set `siteUrl` in `profile.ts` to your real deployed URL
 - [ ] Add your LinkedIn URL (the links appear automatically)
-- [ ] Push the Udhaar Khata repo so its "Source code" link works, and add the APK link once you have one
+- [ ] Push the IOU Book repo (`loan-app`) so its "Source code" link works, and add the APK link once you have one
 - [ ] Add a live link for Solar Vision if it's deployed
 - [ ] Replace the CV PDF with your updated CV
 

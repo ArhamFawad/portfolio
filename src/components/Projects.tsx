@@ -5,10 +5,10 @@ import { projects, type Project } from '@/data/profile';
 import { ProjectLinks, StackTags } from './ProjectLinks';
 import { SectionHeading } from './SectionHeading';
 
-function PhoneFrame({ src, alt, className = '', priority = false }: { src: string; alt: string; className?: string; priority?: boolean }) {
+function PhoneFrame({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
   return (
     <div className={`overflow-hidden rounded-[1.6rem] border-[5px] border-[#15181b] bg-[#15181b] shadow-xl shadow-black/15 ${className}`}>
-      <Image src={src} alt={alt} width={400} height={866} className="h-auto w-full rounded-[1.2rem]" priority={priority} />
+      <Image src={src} alt={alt} width={400} height={866} className="h-auto w-full rounded-[1.2rem]" />
     </div>
   );
 }
@@ -65,7 +65,7 @@ function FeaturedProject({ project }: { project: Project }) {
       <div className="relative mx-auto aspect-[16/10] w-full max-w-lg overflow-hidden rounded-2xl bg-accent-soft">
         <div className="absolute inset-x-0 top-[9%] flex items-start justify-center gap-[3%] px-[5%]">
           {second ? <PhoneFrame {...second} className="mt-[9%] w-[30%]" /> : null}
-          {first ? <PhoneFrame {...first} className="w-[34%]" priority /> : null}
+          {first ? <PhoneFrame {...first} className="w-[34%]" /> : null}
           {third ? <PhoneFrame {...third} className="mt-[9%] w-[30%]" /> : null}
         </div>
       </div>

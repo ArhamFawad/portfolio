@@ -19,9 +19,9 @@ export const profile = {
   /** The part of the headline shown in the accent colour. */
   headlineHighlight: 'real businesses',
   intro:
-    "I've built a 45-page finance website with nine calculators, a React site for a solar company, and Udhaar Khata, an English/Urdu app that helps shopkeepers track credit.",
+    "I've built a 45-page finance website with nine calculators, a React site for a solar company, and IOU Book, an English/Urdu app that helps shopkeepers track credit.",
   about: [
-    "I'm a Computer Science student at Sir Syed University of Engineering and Technology in Karachi, graduating in 2027.",
+    "I'm a final-year Computer Science student at Sir Syed University of Engineering and Technology in Karachi, graduating in 2027.",
     'I like front-end work because it is where code meets the people using it: a calculator that gives the right answer, a form that explains what went wrong, an app that works in the language its users think in.',
     "Right now I'm going deeper into TypeScript, testing and accessibility, and I'm looking for an internship where I can ship real features with a team.",
   ],
@@ -44,14 +44,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: 'udhaar-khata',
+    slug: 'iou-book',
     featured: true,
-    title: 'Udhaar Khata',
+    title: 'IOU Book',
     kicker: 'Mobile app · React Native',
     summary:
-      'Small shops in Pakistan still track credit ("udhaar") in paper notebooks. Udhaar Khata replaces the notebook with an app that does the maths, shows who owes what, and sends a polite WhatsApp reminder.',
+      'Small shops in Pakistan still track credit ("udhaar") in paper notebooks. IOU Book replaces the notebook with an app that does the maths, shows who owes what, and sends a polite WhatsApp reminder.',
     highlights: [
       'Records credit and payments with a running balance, like a paper register',
+      'Search and sort customers by name, phone number, amount due or recent activity',
       'One-tap WhatsApp reminders; Pakistani numbers are formatted automatically',
       'Switch between English and Urdu, with right-to-left layouts',
       'Works fully offline: data is saved on the phone',
@@ -59,13 +60,13 @@ export const projects: Project[] = [
     ],
     stack: ['React Native', 'Expo', 'TypeScript', 'Expo Router', 'AsyncStorage', 'Jest'],
     links: [
-      { label: 'Source code', href: 'https://github.com/ArhamFawad/udhaar-khata', kind: 'code' },
+      { label: 'Source code', href: 'https://github.com/ArhamFawad/loan-app', kind: 'code' },
       // After running an EAS build, add: { label: 'Download APK', href: 'https://expo.dev/...', kind: 'download' },
     ],
     images: [
-      { src: '/projects/udhaar-home.webp', alt: 'Udhaar Khata home screen showing Rs 8,370 to collect from 3 customers' },
-      { src: '/projects/udhaar-customer.webp', alt: "A customer's ledger with a WhatsApp reminder button and running balances" },
-      { src: '/projects/udhaar-urdu.webp', alt: 'The home screen in Urdu with a right-to-left layout' },
+      { src: '/projects/iou-book-home.webp', alt: 'IOU Book home screen showing Rs 8,370 to collect from 3 customers' },
+      { src: '/projects/iou-book-customer.webp', alt: "A customer's ledger with a WhatsApp reminder button and running balances" },
+      { src: '/projects/iou-book-urdu.webp', alt: 'The home screen in Urdu with a right-to-left layout' },
     ],
   },
   {
@@ -106,8 +107,8 @@ export const projects: Project[] = [
 export const skills: { group: string; items: string[] }[] = [
   { group: 'Languages', items: ['JavaScript', 'TypeScript', 'HTML', 'CSS'] },
   { group: 'Frameworks', items: ['React', 'React Native', 'Expo', 'Next.js', 'Tailwind CSS', 'Bootstrap'] },
-  { group: 'Tools', items: ['Git & GitHub', 'Jest', 'Firebase Hosting', 'Vercel', 'WordPress'] },
-  { group: 'Focus areas', items: ['Responsive design', 'Accessibility', 'Offline-first apps', 'Unit testing'] },
+  { group: 'Tools', items: ['Git & GitHub', 'GitHub Actions', 'Jest', 'Firebase Hosting', 'Vercel', 'WordPress'] },
+  { group: 'Focus areas', items: ['Responsive design', 'Accessibility', 'Offline-first apps', 'Unit testing', 'Cross-browser compatibility'] },
 ];
 
 export const education: { degree: string; school: string; years: string }[] = [
